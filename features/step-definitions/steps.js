@@ -1,23 +1,24 @@
-import { Given, When, Then } from '@wdio/cucumber-framework';
-import { expect, $ } from '@wdio/globals'
+const { Given, When, Then } = require('@wdio/cucumber-framework');
 
-import LoginPage from '../pageobjects/login.page.js';
-import SecurePage from '../pageobjects/secure.page.js';
+const LoginPage = require('../pageobjects/login.page.js');
+const HomePage = require('../pageobjects/home.page.js');
 
-const pages = {
-    login: LoginPage
-}
+Given(/^Meiman is on the login page$/, async () => {
+    await LoginPage.open()
+})
 
-Given(/^I am on the (\w+) page$/, async (page) => {
-    await pages[page].open()
-});
+When(/^Meiman login with "(.*)" credential$/, async (username) => {
+    await LoginPage.login(username)
+})
 
-When(/^I login with (\w+) and (.+)$/, async (username, password) => {
-    await LoginPage.login(username, password)
-});
+Then(/^Meiman should see home page$/, async() => {
+    await HomePage.validateHomePage()
+})
 
-Then(/^I should see a flash message saying (.*)$/, async (message) => {
-    await expect(SecurePage.flashAlert).toBeExisting();
-    await expect(SecurePage.flashAlert).toHaveTextContaining(message);
-});
+Then(/^Meiman should see error "(.*)"$/, async (dynamicMessage) => {
+    await LoginPage.validateLockedOutUserError(dynamicMessage)
+}) 
 
+When(/^Meiman login with "(.*)"$/, async (name) => {
+    await LoginPage.login(name)
+})
