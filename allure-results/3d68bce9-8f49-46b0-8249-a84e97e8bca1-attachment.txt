@@ -1,0 +1,5 @@
+{
+  "error": "no such element",
+  "message": "no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\".shopping_cart_link\"}\n  (Session info: chrome=122.0.6261.69)",
+  "stacktrace": "\tGetHandleVerifier [0x00007FF7678F4C82+3505170]\n\t(No symbol) [0x00007FF767520852]\n\t(No symbol) [0x00007FF7673D4145]\n\t(No symbol) [0x00007FF767419ADD]\n\t(No symbol) [0x00007FF767419C1C]\n\t(No symbol) [0x00007FF76745AB27]\n\t(No symbol) [0x00007FF76743BECF]\n\t(No symbol) [0x00007FF7674583B2]\n\t(No symbol) [0x00007FF76743BC33]\n\t(No symbol) [0x00007FF76740D618]\n\t(No symbol) [0x00007FF76740E6B1]\n\tGetHandleVerifier [0x00007FF7679267DD+3708781]\n\tGetHandleVerifier [0x00007FF76797FC5D+4074477]\n\tGetHandleVerifier [0x00007FF767977DDF+4042095]\n\tGetHandleVerifier [0x00007FF76764A136+708806]\n\t(No symbol) [0x00007FF76752CB0F]\n\t(No symbol) [0x00007FF767527D14]\n\t(No symbol) [0x00007FF767527E6C]\n\t(No symbol) [0x00007FF7675179A4]\n\tBaseThreadInitThunk [0x00007FFFB482257D+29]\n\tRtlUserThreadStart [0x00007FFFB606AA58+40]\n"
+}
